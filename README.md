@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml  
 dependencies:  
     ... 
-    al_quran: ^0.0.1  
+    al_quran: ^0.0.1+2 
 ```  
 
 Import it:
