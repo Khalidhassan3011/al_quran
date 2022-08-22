@@ -4,16 +4,16 @@ import '../model/surah.dart';
 
 extension EngDigitToOther on int {
   // translate english digit to bangla
-  String get bn => _numConversion(["০","১","২","৩","৪","৫","৬","৭","৮","৯"], this);
+  String get bn => _numConversion(["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"], this);
 
   // translate english digit to arabic
-  String get ar => _numConversion(["٠","١","٢","٣","٤","٥","٦","٧","٨","٩"], this);
+  String get ar => _numConversion(["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"], this);
 
   // translate digit one to another
   String _numConversion(List<String> numberList, int number) {
     String number = "";
 
-    for(String digit in toString().split("")) {
+    for (String digit in toString().split("")) {
       number += numberList[int.parse(digit)];
     }
 

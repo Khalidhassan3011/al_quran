@@ -14,7 +14,9 @@ import 'data/juz_data.dart';
 import 'data/sajdah_data.dart';
 
 part 'common/features/quran_details.dart';
+
 part 'common/features/bismillah.dart';
+
 part 'common/features/surah_details.dart';
 
 class AlQuran {
@@ -30,4 +32,3 @@ class AlQuran {
   /// get surah [byName, bySurahNumber(int surahNumber), byJuzNumber(int juzNumber), byVerseNumber(int verseNumber), byPageNumber(int pageNumber)]
   static _SurahDetails get surahDetails => _SurahDetails();
 }
-

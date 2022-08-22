@@ -63,9 +63,7 @@ class _FullJuz {
       for (int surahNumber in juz["surahs"]) {
         Surah selectedSurah = AlQuran.surahDetails.bySurahNumber(surahNumber);
 
-        int start = juz["verses"][surahNumber][0] - 1;
-
-        for (start; start < juz["verses"][surahNumber][1]; start++) {
+        for (int start = juz["verses"][surahNumber][0] - 1; start < juz["verses"][surahNumber][1]; start++) {
           perJuzAyat.add(selectedSurah.ayahs[start]);
         }
       }
@@ -79,7 +77,7 @@ class _AllSajdah {
   List<Surah> get bySurah {
     List<Surah> temp = [];
 
-    for(Map<String, int> data in SajdahData.data) {
+    for (Map<String, int> data in SajdahData.data) {
       Surah selectedSurah = AlQuran.surahDetails.bySurahNumber(data["surah"]!);
       Ayat sajdahAyat = selectedSurah.ayahs[data["verse"]! - 1];
       selectedSurah.ayahs.clear();
@@ -94,7 +92,7 @@ class _AllSajdah {
   List<Ayat> get byVerse {
     List<Ayat> temp = [];
 
-    for(Map<String, int> data in SajdahData.data) {
+    for (Map<String, int> data in SajdahData.data) {
       temp.add(AlQuran.surahDetails.bySurahNumber(data["surah"]!).ayahs[data["verse"]! - 1]);
     }
 
@@ -103,32 +101,29 @@ class _AllSajdah {
 }
 
 class _AllRuku {
-  List<List<Ayat>> get allRukus  {
+  List<List<Ayat>> get allRukus {
     List<List<Ayat>> temp = [];
 
     List<Ayat> perRukuAyat = [];
-    for(Surah surah in _FullQuran().quran) {
-      for(Ayat ayat in surah.ayahs) {
+    for (Surah surah in _FullQuran().quran) {
+      for (Ayat ayat in surah.ayahs) {
         if (perRukuAyat.isEmpty) {
           perRukuAyat.add(ayat);
           continue;
         }
 
-        if(ayat.ruku != perRukuAyat.last.ruku) {
+        if (ayat.ruku != perRukuAyat.last.ruku) {
           temp.add(perRukuAyat);
           perRukuAyat = [];
           perRukuAyat.add(ayat);
         } else {
           perRukuAyat.add(ayat);
         }
-
       }
     }
 
     return temp..add(perRukuAyat);
   }
-
-
 }
 
 class _Count {
@@ -139,6 +134,7 @@ class _Count {
   // constant value
   /// reference - AL QURAN
   int get para => 30;
+
   int get juz => para;
 
   // constant value
@@ -152,6 +148,7 @@ class _Count {
   // constant value
   /// reference - AL QURAN
   int get verseOfSajdah => 15;
+
   int get ayatOfSajdah => verseOfSajdah;
 
   // constant value
@@ -171,6 +168,7 @@ class _Count {
   // constant value
   /// reference - AL QURAN
   int get ayat => 6236;
+
   int get verse => ayat;
 
   // constant value

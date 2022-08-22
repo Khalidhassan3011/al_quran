@@ -48,26 +48,26 @@ class Surah {
   String toRawJson() => json.encode(toJson());
 
   factory Surah.fromJson(Map<String, dynamic> json) => Surah(
-    number: json["number"],
-    name: json["name"],
-    englishName: json["englishName"],
-    englishNameTranslation: json["englishNameTranslation"],
-    revelationType: revelationTypeValues.map[json["revelationType"]]!,
-    verse: json["verse"],
-    words: json["words"],
-    chars: json["chars"],
-    ayahs: List<Ayat>.from(json["ayahs"].map((x) => Ayat.fromJson(x))),
-  );
+        number: json["number"],
+        name: json["name"],
+        englishName: json["englishName"],
+        englishNameTranslation: json["englishNameTranslation"],
+        revelationType: revelationTypeValues.map[json["revelationType"]]!,
+        verse: json["verse"],
+        words: json["words"],
+        chars: json["chars"],
+        ayahs: List<Ayat>.from(json["ayahs"].map((x) => Ayat.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "number": number,
-    "name": name,
-    "englishName": englishName,
-    "englishNameTranslation": englishNameTranslation,
-    "revelationType": revelationTypeValues.reverse[revelationType],
-    "verse": verse,
-    "words": words,
-    "chars": chars,
-    "ayahs": List<dynamic>.from(ayahs.map((x) => x.toJson())),
-  };
+        "number": number,
+        "name": name,
+        "englishName": englishName,
+        "englishNameTranslation": englishNameTranslation,
+        "revelationType": revelationTypeValues.reverse[revelationType],
+        "verse": verse,
+        "words": words,
+        "chars": chars,
+        "ayahs": List<dynamic>.from(ayahs.map((x) => x.toJson())),
+      };
 }

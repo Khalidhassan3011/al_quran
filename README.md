@@ -4,9 +4,10 @@ Also available audio link, revelation type and other information.
 
 #### Platform Support
 
-| Android | iOS | MacOS | Web | Linux | Windows |  
-| :-----: | :-: | :---: | :-: | :---: | :-----: |  
-|   ✔️    | ✔️  |  ✔️  | ✔️  |  ✔️  |   ✔️  |
+| Android  | iOS  | MacOS | Web | Linux | Linux  |
+|----------|------|-------|-----|-------|--------|
+|     ✔    |   ✔  |   ✔   |  ✔  |   ✔   |    ✔   |
+
 
 #### Inspiration From
 - [Quranil Hakim](https://quran.com/en)
@@ -87,7 +88,7 @@ class Surah {
 
 #### Ayat
 ```dart  
-class Surah {
+class Ayat {
   // number of ayat / verse on full quran
   final int number;
   

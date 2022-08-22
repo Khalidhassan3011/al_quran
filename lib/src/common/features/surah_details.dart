@@ -11,7 +11,6 @@ class _SurahDetails {
    */
   _SurahDetailsByName get byName => _SurahDetailsByName();
 
-
   /// get every surah details by surah name
   /// its return a object of Surah type
   /* Example
@@ -43,11 +42,11 @@ class _SurahDetails {
    */
   List<Surah> byJuzNumber(int juzNumber) {
     // throw error for invalid juzNumber
-    if(Utils.juzValidation(juzNumber)) throw AppStrings.invalidJuzNumber;
+    if (Utils.juzValidation(juzNumber)) throw AppStrings.invalidJuzNumber;
 
     List<Surah> temp = [];
 
-    for(int surahNumber in JuzData.juz[juzNumber - 1]["surahs"].length) {
+    for (int surahNumber in JuzData.juz[juzNumber - 1]["surahs"].length) {
       temp.add(bySurahNumber(surahNumber));
     }
 
@@ -68,7 +67,7 @@ class _SurahDetails {
    */
   Surah byVerseNumber(int verseNumber) {
     // throw error for invalid verseNumber
-    if(Utils.verseValidation(verseNumber)) throw AppStrings.invalidVerseNumber;
+    if (Utils.verseValidation(verseNumber)) throw AppStrings.invalidVerseNumber;
 
     int totalVerseSearch = 0;
     for (int surahNumber = 0; surahNumber < FullQuranData.full.length; surahNumber++) {
@@ -99,7 +98,7 @@ class _SurahDetails {
    */
   List<Surah> byPageNumber(int pageNumber) {
     // throw error for invalid pageNumber
-    if(Utils.verseValidation(pageNumber)) throw AppStrings.invalidPageNumber;
+    if (Utils.verseValidation(pageNumber)) throw AppStrings.invalidPageNumber;
 
     List<Surah> temp = [];
 
@@ -109,11 +108,9 @@ class _SurahDetails {
 
     return temp;
   }
-
 }
 
 class _SurahDetailsByName {
-
   // surah alFatiha
   Surah get alFatiha => AllSurahs.alFatiha.details;
 

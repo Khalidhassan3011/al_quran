@@ -66,44 +66,43 @@ class Ayat {
   // full verse / ayat translation separate with words in bangla
   final String wordsBangla;
 
-
   factory Ayat.fromRawJson(String str) => Ayat.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Ayat.fromJson(Map<String, dynamic> json) => Ayat(
-    number: json["number"],
-    audio: json["audio"],
-    audioSecondary: List<String>.from((json["audioSecondary"] ?? []).map((x) => x)),
-    text: json["text"],
-    translateBn: json["translate_bn"],
-    numberInSurah: json["numberInSurah"],
-    juz: json["juz"],
-    manzil: json["manzil"],
-    page: json["page"],
-    ruku: json["ruku"],
-    hizbQuarter: json["hizbQuarter"],
-    sajdah: json["sajda"],
-    pronunciationBn: json["pronunciation_bn"],
-    wordsArabic: json["words_arabic"],
-    wordsBangla: json["words_bangla"],
-  );
+        number: json["number"],
+        audio: json["audio"],
+        audioSecondary: List<String>.from((json["audioSecondary"] ?? []).map((x) => x)),
+        text: json["text"],
+        translateBn: json["translate_bn"],
+        numberInSurah: json["numberInSurah"],
+        juz: json["juz"],
+        manzil: json["manzil"],
+        page: json["page"],
+        ruku: json["ruku"],
+        hizbQuarter: json["hizbQuarter"],
+        sajdah: json["sajda"],
+        pronunciationBn: json["pronunciation_bn"],
+        wordsArabic: json["words_arabic"],
+        wordsBangla: json["words_bangla"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "number": number,
-    "audio": audio,
-    "audioSecondary": List<dynamic>.from(audioSecondary.map((x) => x)),
-    "text": text,
-    "translate_bn": translateBn,
-    "numberInSurah": numberInSurah,
-    "juz": juz,
-    "manzil": manzil,
-    "page": page,
-    "ruku": ruku,
-    "hizbQuarter": hizbQuarter,
-    "sajda": sajdah,
-    "pronunciation_bn": pronunciationBn,
-    "words_arabic": wordsArabic,
-    "words_bangla": wordsBangla,
-  };
+        "number": number,
+        "audio": audio,
+        "audioSecondary": List<dynamic>.from(audioSecondary.map((x) => x)),
+        "text": text,
+        "translate_bn": translateBn,
+        "numberInSurah": numberInSurah,
+        "juz": juz,
+        "manzil": manzil,
+        "page": page,
+        "ruku": ruku,
+        "hizbQuarter": hizbQuarter,
+        "sajda": sajdah,
+        "pronunciation_bn": pronunciationBn,
+        "words_arabic": wordsArabic,
+        "words_bangla": wordsBangla,
+      };
 }

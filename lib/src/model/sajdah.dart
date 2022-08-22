@@ -19,14 +19,14 @@ class Sajdah {
   String toRawJson() => json.encode(toJson());
 
   factory Sajdah.fromJson(Map<String, dynamic> json) => Sajdah(
-    id: json["id"],
-    recommended: json["recommended"],
-    obligatory: json["obligatory"],
-  );
+        id: json["id"],
+        recommended: json["recommended"],
+        obligatory: json["obligatory"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "recommended": recommended,
-    "obligatory": obligatory,
-  };
+        "id": id,
+        "recommended": recommended,
+        "obligatory": obligatory,
+      };
 }
