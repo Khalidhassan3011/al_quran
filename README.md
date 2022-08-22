@@ -197,7 +197,7 @@ Text(123.ar)
     |               |   bySurahNumber(int surahNumber)  |                                   |   Surah                |
     |               |   byJuzNumber(int juzNumber)      |                                   |   List<Surah>          |
     |               |   byVerseNumber(int verseNumber)  |                                   |   Surah                |
-    |               |   byPageNumber(int pageNumber)	|                                   |   List<Surah>          |
+    |               |   byPageNumber(int pageNumber)    |                                   |   List<Surah>          |
     |---------------|-----------------------------------|-----------------------------------|------------------------|
     
 
