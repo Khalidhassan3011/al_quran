@@ -4,9 +4,9 @@ Also available audio link, revelation type and other information.
 
 #### Platform Support
 
-| Android  | iOS  | MacOS | Web | Linux | Linux  |
-|----------|------|-------|-----|-------|--------|
-|     ✔    |   ✔  |   ✔   |  ✔  |   ✔   |    ✔   |
+| Android  | iOS  | Linux | MacOS | Web   | Windows |
+|----------|------|-------|-------|-------|---------|
+|     ✔    |   ✔  |   ✔   |  ✔    |   ✔   |    ✔    |
 
 
 #### Inspiration From
@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml  
 dependencies:  
     ... 
-    al_quran: ^0.0.1+2 
+    al_quran: ^0.0.1+3
 ```  
 
 Import it:
@@ -94,7 +94,7 @@ class Ayat {
   
   // audio link
   // it collect form online. so sometime it will not work
-  final String? audio;
+  final String audio;
 
   // different server audio link 
   // it collect form online. so sometime it will not work
@@ -155,7 +155,7 @@ class Sajdah {
 ```dart  
 AlQuran.[FEATURES].[AVAILABLE PROPERTIES].[PROPERTIES]
 
-/// convert any digit in bangla or english
+/// convert any digit in bangla or arabic
 
 // english 123 to bangla ১২৩
 Text(123.bn)
@@ -204,4 +204,4 @@ Text(123.ar)
 
 
 ## Request for this package user
-if you found any error or bug please report an issue or send me a email ASAP.
+If you found any error or bug please report an issue or send me an <a href="mailto:khalidhassan3011@gmail.com">eMail</a> ASAP.
