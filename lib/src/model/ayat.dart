@@ -24,7 +24,7 @@ class Ayat {
 
   // audio link
   // it collect form online. so sometime it will not work
-  final String? audio;
+  final String audio;
 
   // different server audio link
   // it collect form online. so sometime it will not work
