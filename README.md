@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml  
 dependencies:  
     ... 
-    al_quran: ^0.0.1+3
+    al_quran: ^0.0.1+4
 ```  
 
 Import it:
@@ -86,7 +86,7 @@ class Surah {
 }
 ``` 
 
-#### Ayat
+#### Ayat / Verse
 ```dart  
 class Ayat {
   // number of ayat / verse on full quran
@@ -180,7 +180,7 @@ Text(123.ar)
     |               |   getAllSajdahVerse               |  bySurah                          |   List<Surah>          |
     |               |                                   |  byVerse                          |   List<Ayat>           |
     |               |-----------------------------------|-----------------------------------|------------------------|
-    |               |   getFullQuran                    |  getAllVerseByRuku                |   List<List<Ayat>>     |
+    |               |   getAllVerseByRuku               |                                   |   List<List<Ayat>>     |
     |               |-----------------------------------|-----------------------------------|------------------------|
     |               |   count                           |  surah                            |   int                  |
     |               |                                   |  para / juz                       |   int                  |

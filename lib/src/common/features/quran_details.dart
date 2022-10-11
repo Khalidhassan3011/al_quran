@@ -192,7 +192,7 @@ class _Count {
    */
   int surahOnPage(int pageNumber) {
     // throw error for invalid pageNumber
-    if (Utils.verseValidation(pageNumber)) throw AppStrings.invalidPageNumber;
+    if (!Utils.isPageNumberValid(pageNumber)) throw AppStrings.invalidPageNumber;
 
     return PageData.page[pageNumber - 1].length;
   }
@@ -210,7 +210,7 @@ class _Count {
    */
   int verseOnPage(int pageNumber) {
     // throw error for invalid pageNumber
-    if (Utils.verseValidation(pageNumber)) throw AppStrings.invalidPageNumber;
+    if (!Utils.isPageNumberValid(pageNumber)) throw AppStrings.invalidPageNumber;
 
     int verseCount = 0;
     for (Map<String, int> element in PageData.page[pageNumber - 1]) {

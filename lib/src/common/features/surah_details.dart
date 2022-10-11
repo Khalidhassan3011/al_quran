@@ -23,7 +23,7 @@ class _SurahDetails {
   /* NB
       [surahNumber] must be valid otherwise function throw an error
    */
-  Surah bySurahNumber(int surahNumber) => Utils.surahValidation(surahNumber)
+  Surah bySurahNumber(int surahNumber) => Utils.isSurahNumberValid(surahNumber)
       ? Surah.fromJson(FullQuranData.full[surahNumber - 1])
       : throw AppStrings.invalidSurahNumber;
 
@@ -42,11 +42,11 @@ class _SurahDetails {
    */
   List<Surah> byJuzNumber(int juzNumber) {
     // throw error for invalid juzNumber
-    if (Utils.juzValidation(juzNumber)) throw AppStrings.invalidJuzNumber;
+    if (!Utils.isJuzNumberValid(juzNumber)) throw AppStrings.invalidJuzNumber;
 
     List<Surah> temp = [];
 
-    for (int surahNumber in JuzData.juz[juzNumber - 1]["surahs"].length) {
+    for (int surahNumber in JuzData.juz[juzNumber - 1]["surahs"]) {
       temp.add(bySurahNumber(surahNumber));
     }
 
@@ -67,7 +67,7 @@ class _SurahDetails {
    */
   Surah byVerseNumber(int verseNumber) {
     // throw error for invalid verseNumber
-    if (Utils.verseValidation(verseNumber)) throw AppStrings.invalidVerseNumber;
+    if (!Utils.isVerseNumberValid(verseNumber)) throw AppStrings.invalidVerseNumber;
 
     int totalVerseSearch = 0;
     for (int surahNumber = 0; surahNumber < FullQuranData.full.length; surahNumber++) {
@@ -98,7 +98,7 @@ class _SurahDetails {
    */
   List<Surah> byPageNumber(int pageNumber) {
     // throw error for invalid pageNumber
-    if (Utils.verseValidation(pageNumber)) throw AppStrings.invalidPageNumber;
+    if (!Utils.isPageNumberValid(pageNumber)) throw AppStrings.invalidPageNumber;
 
     List<Surah> temp = [];
 
