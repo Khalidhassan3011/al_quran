@@ -2,43 +2,29 @@ import 'dart:convert';
 
 import '../enum/revelation_type.dart';
 import 'ayat.dart';
+import 'surah_basic_info.dart';
 
-class Surah {
+class Surah extends SurahBasicInfo {
   Surah({
-    required this.number,
-    required this.name,
-    required this.englishName,
-    required this.englishNameTranslation,
-    required this.revelationType,
-    required this.verse,
-    required this.words,
-    required this.chars,
     required this.ayahs,
-  });
-
-  // surah number
-  final int number;
-
-  // surah name in arabic
-  final String name;
-
-  // surah name in english
-  final String englishName;
-
-  // surah name translation in english
-  final String englishNameTranslation;
-
-  // revelationType will Meccan or Medinan
-  final RevelationType revelationType;
-
-  // total verse or ayat in surah
-  final int verse;
-
-  // total words in surah
-  final int words;
-
-  // total char or letters in surah
-  final int chars;
+    required int number,
+    required String name,
+    required String englishName,
+    required String englishNameTranslation,
+    required RevelationType revelationType,
+    required int verse,
+    required int words,
+    required int chars,
+  }) : super(
+          number: number,
+          name: name,
+          englishName: englishName,
+          englishNameTranslation: englishNameTranslation,
+          revelationType: revelationType,
+          verse: verse,
+          words: words,
+          chars: chars,
+        );
 
   // list of ayat / verse
   final List<Ayat> ayahs;
