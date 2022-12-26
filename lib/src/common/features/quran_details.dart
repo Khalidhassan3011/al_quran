@@ -2,9 +2,12 @@ part of '../../al_quran.dart';
 
 class _QuranDetails {
   /// get fullQuran
-  /// it returns a list of surahs
+  /// it returns a list of surah's
   /// the length of list is 114 means all surah of quran
   List<Surah> get getFullQuran => _FullQuran().quran;
+
+  /// get all surah basic info
+  List<SurahBasicInfo> get getAllSurahBasicInfo => _AllSurahBasicInfo().allSurahBasicInfo;
 
   /// get full juz
   _FullJuz get getFullJuz => _FullJuz();
@@ -26,6 +29,18 @@ class _FullQuran {
 
     for (var element in FullQuranData.full) {
       temp.add(Surah.fromJson(element));
+    }
+
+    return temp;
+  }
+}
+
+class _AllSurahBasicInfo {
+  List<SurahBasicInfo> get allSurahBasicInfo {
+    List<SurahBasicInfo> temp = [];
+
+    for (var element in AllSurahBasicInfoData.basicDetails) {
+      temp.add(SurahBasicInfo.fromJson(element));
     }
 
     return temp;
