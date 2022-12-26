@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml  
 dependencies:  
     ... 
-    al_quran: ^0.0.1+4
+    al_quran: ^0.1.1+5
 ```  
 
 Import it:
@@ -52,7 +52,34 @@ you can convert any model to map </br>
 it will return a `Map<String, dynamic>` </br>
 `Ex: [Model Name].toJson();`
 
-
+#### Surah Basic Info
+```dart  
+class SurahBasicInfo {
+  // surah number
+  final int number;
+  
+  // surah name in arabic
+  final String name;
+  
+  // surah name in english
+  final String englishName;
+  
+  // surah name translation in english
+  final String englishNameTranslation;
+  
+  // revelationType will Meccan or Medinan
+  final RevelationType revelationType;
+  
+  // total verse or ayat in surah
+  final int verse;
+  
+  // total words in surah
+  final int words;
+  
+  // total char or letters in surah
+  final int chars;
+}
+``` 
 
 #### Surah
 ```dart  
@@ -173,6 +200,8 @@ Text(123.ar)
     |               |   unicode                         |                                   |   String               |
     |---------------|-----------------------------------|-----------------------------------|------------------------|                
     |  quranDetails |   getFullQuran                    |                                   |   List<Surah>          |
+    |               |-----------------------------------|-----------------------------------|------------------------|
+    |               |   getAllSurahBasicInfo            |                                   |   List<SurahBasicInfo> |
     |               |-----------------------------------|-----------------------------------|------------------------|
     |               |   getFullJuz                      |  bySurah                          |   List<List<Surah>>    |
     |               |                                   |  byVerse                          |   List<List<Ayat>>     |

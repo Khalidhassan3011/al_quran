@@ -1,6 +1,12 @@
+## 0.1.1+5
+###### code: 2612220151
+new feature [<b>getAllSurahBasicInfo</b>]</br>
+    uses: [<b>AlQuran.quranDetails.getAllSurahBasicInfo</b>]</br>
+update readme.md
+
 ## 0.0.1+4
 ###### code: 1210221255
-bug fixed [surahDetails]
+bug fixed [surahDetails]</br>
 change readme.md
 
 ## 0.0.1+3

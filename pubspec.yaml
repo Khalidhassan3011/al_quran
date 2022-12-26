@@ -1,7 +1,7 @@
 name: al_quran
 description: A simple Quran package for flutter with arabic text, english translation, bangla language and pronunciation.
   Also available audio link, revelation type and other information.
-version: 0.0.1+4
+version: 0.1.1+5
 homepage: https://github.com/Khalidhassan3011/al_quran
 
 environment:
