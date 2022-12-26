@@ -4,10 +4,12 @@ export 'common/extensions.dart';
 export 'common/strings.dart';
 export 'model/surah.dart';
 export 'model/ayat.dart';
+export 'model/surah_basic_info.dart';
 import '../al_quran.dart';
 import 'common/utils/utils.dart';
 import 'data/full_quran_data.dart';
 import 'data/page_data.dart';
+import 'data/all_surah_basic_info_date.dart';
 import 'enum/all_surahs.dart';
 
 import 'data/juz_data.dart';
