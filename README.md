@@ -234,3 +234,8 @@ Text(123.ar)
 
 ## Request for this package user
 If you found any error or bug please report an issue or send me an <a href="mailto:khalidhassan3011@gmail.com">eMail</a> ASAP.
+
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/al_quran/count.svg" alt ="Loading">
